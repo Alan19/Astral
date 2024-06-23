@@ -1,9 +1,11 @@
 package com.minerarcana.astral.item;
 
 import com.minerarcana.astral.Astral;
+import com.minerarcana.astral.block.AstralBlocks;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -21,7 +23,7 @@ public class AstralItems {
             .nutrition(1)
             .build())));
 
-    public static final Supplier<Item> FEVERWEED = ITEMS.register("feverweed", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+    public static final Supplier<BlockItem> FEVERWEED = ITEMS.register("feverweed", () -> new BlockItem(AstralBlocks.FEVERWEED_PLANT.get(), new Item.Properties().food(new FoodProperties.Builder()
             .fast()
             .effect(() -> new MobEffectInstance(MobEffects.LUCK, 300, 1), 1)
             .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 300, 1), 1)
