@@ -1,5 +1,6 @@
 package com.minerarcana.astral.worldgen;
 
+import com.minerarcana.astral.Astral;
 import com.minerarcana.astral.block.AstralBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.BlockTags;
@@ -38,7 +39,7 @@ public class SnowberryBushFeature extends Feature<SnowberryPatchConfig> {
             if ((worldgenlevel.isEmptyBlock(pos) || worldgenlevel.getBlockState(pos).is(BlockTags.SNOW)) && AstralBlocks.SNOWBERRY_BUSH.get().canSurvive(worldgenlevel.getBlockState(pos), worldgenlevel, pos)) {
                 spawnSnowberries(worldgenlevel, randomsource, pos);
                 ++generated;
-                System.out.println("Spawning Snowberry at " + blockpos);
+                Astral.LOGGER.debug("Spawning Snowberry at " + blockpos);
             }
             ++tryCount;
         }

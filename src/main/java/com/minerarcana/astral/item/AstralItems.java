@@ -3,6 +3,7 @@ package com.minerarcana.astral.item;
 import com.minerarcana.astral.Astral;
 import com.minerarcana.astral.block.AstralBlocks;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -41,6 +42,7 @@ public class AstralItems {
     // Creates a creative tab with the id "astral:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ASTRAL_TAB = CREATIVE_MODE_TABS.register("astral", () -> CreativeModeTab.builder()
             .icon(() -> SNOWBERRIES.get().getDefaultInstance())
+            .title(Component.translatable("itemGroup.astral"))
             .displayItems((parameters, output) -> {
                 output.accept(AstralItems.FEVERWEED.get());
                 output.accept(AstralItems.SNOWBERRIES.get());

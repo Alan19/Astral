@@ -23,10 +23,10 @@ public class DataGen {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         PackOutput packOutput = generator.getPackOutput();
-        generator.addProvider(true, new ItemModels(packOutput, existingFileHelper));
-        generator.addProvider(true, new AstralBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(true, new AstralEnglishLocalization(packOutput, "en_us"));
-        generator.addProvider(true, new AstralDatapackRegistryProvider(packOutput, lookupProvider));
-        generator.addProvider(true, new AstralBlockTagsProvider(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeClient(), new ItemModels(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new AstralBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new AstralEnglishLocalization(packOutput, "en_us"));
+        generator.addProvider(event.includeServer(), new AstralDatapackRegistryProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new AstralBlockTagsProvider(packOutput, lookupProvider, existingFileHelper));
     }
 }
