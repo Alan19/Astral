@@ -63,12 +63,12 @@ public class PotionRegistryGroup {
         BrewingRecipeRegistry.addRecipe(asPotion(potionBase), baseReagent.get(), potionToItemStack(basePotion.get()));
         BrewingRecipeRegistry.addRecipe(asSplashPotion(potionBase), baseReagent.get(), potionToSplashPotionItemStack(basePotion.get()));
         if (longEffect != null) {
-            BrewingRecipeRegistry.addRecipe(asPotion(potionBase), longReagent.get(), potionToItemStack(longPotion.get()));
-            BrewingRecipeRegistry.addRecipe(asSplashPotion(potionBase), longReagent.get(), potionToSplashPotionItemStack(longPotion.get()));
+            BrewingRecipeRegistry.addRecipe(asPotion(basePotion.get()), longReagent.get(), potionToItemStack(longPotion.get()));
+            BrewingRecipeRegistry.addRecipe(asSplashPotion(basePotion.get()), longReagent.get(), potionToSplashPotionItemStack(longPotion.get()));
         }
         if (strongEffect != null) {
-            BrewingRecipeRegistry.addRecipe(asPotion(potionBase), strongReagent.get(), potionToItemStack(strongPotion.get()));
-            BrewingRecipeRegistry.addRecipe(asSplashPotion(potionBase), strongReagent.get(), potionToSplashPotionItemStack(strongPotion.get()));
+            BrewingRecipeRegistry.addRecipe(asPotion(basePotion.get()), strongReagent.get(), potionToItemStack(strongPotion.get()));
+            BrewingRecipeRegistry.addRecipe(asSplashPotion(basePotion.get()), strongReagent.get(), potionToSplashPotionItemStack(strongPotion.get()));
         }
 
 
