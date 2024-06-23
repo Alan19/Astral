@@ -1,7 +1,6 @@
-package com.minerarcana.astral.data;
+package com.minerarcana.astral.data.provider;
 
 import com.minerarcana.astral.Astral;
-import com.minerarcana.astral.block.AstralBlocks;
 import com.minerarcana.astral.item.AstralItems;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -26,7 +25,11 @@ public class ItemModels extends ItemModelProvider {
     @Override
     protected void registerModels() {
         forItem(AstralItems.SNOWBERRIES);
-        forBlockItem(AstralItems.FEVERWEED);
+        handheldItemFromBlock(AstralItems.FEVERWEED);
+    }
+
+    private void handheldItemFromBlock(Supplier<? extends BlockItem> item) {
+        singleTexture(BuiltInRegistries.ITEM.getKey(item.get()).getPath(), mcLoc("item/handheld"), "layer0", modLoc("block/" + BuiltInRegistries.ITEM.getKey(item.get()).getPath()));
     }
 
     private void forItem(Supplier<? extends Item> item) {

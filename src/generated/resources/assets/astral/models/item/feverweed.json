@@ -1,3 +1,6 @@
 {
-  "parent": "astral:block/feverweed_plant"
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "astral:block/feverweed"
+  }
 }

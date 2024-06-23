@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "astral:block/snowberry_bush_0"
+    },
+    "age=1": {
+      "model": "astral:block/snowberry_bush_1"
+    },
+    "age=2": {
+      "model": "astral:block/snowberry_bush_2"
+    },
+    "age=3": {
+      "model": "astral:block/snowberry_bush_3"
+    }
+  }
+}

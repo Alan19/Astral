@@ -2,6 +2,7 @@ package com.minerarcana.astral;
 
 import com.minerarcana.astral.block.AstralBlocks;
 import com.minerarcana.astral.item.AstralItems;
+import com.minerarcana.astral.worldgen.AstralFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -38,6 +39,8 @@ public class Astral {
         AstralItems.ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         AstralItems.CREATIVE_MODE_TABS.register(modEventBus);
+
+        AstralFeatures.FEATURES.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         NeoForge.EVENT_BUS.register(this);
