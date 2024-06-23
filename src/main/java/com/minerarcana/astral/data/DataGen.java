@@ -14,5 +14,6 @@ public class DataGen {
         DataGenerator generator = event.getGenerator();
 
         generator.addProvider(true, new ItemModels(generator.getPackOutput(), event.getExistingFileHelper()));
+        generator.addProvider(true, new Blockstates(generator.getPackOutput(), event.getExistingFileHelper()));
     }
 }
