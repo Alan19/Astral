@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
 public class FeverweedPlant extends BushBlock {
+
     public static final MapCodec<FeverweedPlant> CODEC = RecordCodecBuilder.mapCodec(
             feverweedPlantInstance -> feverweedPlantInstance.group(ResourceKey
                             .codec(Registries.CONFIGURED_FEATURE).fieldOf("feature")
