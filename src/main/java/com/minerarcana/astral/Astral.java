@@ -2,6 +2,7 @@ package com.minerarcana.astral;
 
 import com.minerarcana.astral.block.AstralBlocks;
 import com.minerarcana.astral.item.AstralItems;
+import com.minerarcana.astral.item.alchemy.AstralPotions;
 import com.minerarcana.astral.worldgen.AstralFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -33,14 +34,12 @@ public class Astral {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
+        // Register blocks, items, etc.
         AstralBlocks.BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
         AstralItems.ITEMS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
         AstralItems.CREATIVE_MODE_TABS.register(modEventBus);
-
         AstralFeatures.FEATURES.register(modEventBus);
+        AstralPotions.POTIONS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         NeoForge.EVENT_BUS.register(this);

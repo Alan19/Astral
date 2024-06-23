@@ -25,7 +25,7 @@ public class DataGen {
         PackOutput packOutput = generator.getPackOutput();
         generator.addProvider(true, new ItemModels(packOutput, existingFileHelper));
         generator.addProvider(true, new AstralBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(true, new EnglishLocalization(packOutput, "en_us"));
+        generator.addProvider(true, new AstralEnglishLocalization(packOutput, "en_us"));
         generator.addProvider(true, new AstralDatapackRegistryProvider(packOutput, lookupProvider));
         generator.addProvider(true, new AstralBlockTagsProvider(packOutput, lookupProvider, existingFileHelper));
     }
