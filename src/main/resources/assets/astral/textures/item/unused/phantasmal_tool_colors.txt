@@ -1,2 +1,0 @@
-Head: #DFD9A7
-Rod: #DCCBCA

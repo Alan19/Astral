@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.minerarcana.astral.mixin",
+  "package": "com.alan19.astral.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "astral.refmap.json",
   "mixins": [
