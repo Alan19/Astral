@@ -1,0 +1,85 @@
+{
+	"credit": "Made with Blockbench",
+	"render_type": "cutout_mipped",
+	"textures": {
+		"4": "astral:item/small_snowberries",
+		"log": "block/spruce_log",
+		"log_top": "block/spruce_log_top",
+		"leaves": "astral:block/snowberry_leaves",
+		"particle": "astral:block/snowberry_leaves",
+		"snow": "block/snow"
+	},
+	"elements": [
+		{
+			"name": "Stem",
+			"from": [6, 1, 6],
+			"to": [10, 15, 10],
+			"faces": {
+				"north": {"uv": [6, 0, 10, 16], "texture": "#log"},
+				"east": {"uv": [6, 0, 10, 16], "texture": "#log"},
+				"south": {"uv": [6, 0, 10, 16], "texture": "#log"},
+				"west": {"uv": [6, 0, 10, 16], "texture": "#log"},
+				"up": {"uv": [5, 5, 11, 11], "texture": "#log_top"},
+				"down": {"uv": [5, 5, 11, 11], "texture": "#log_top"}
+			}
+		},
+		{
+			"name": "Snowlayer",
+			"from": [1, 0, 1],
+			"to": [15, 1, 15],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 1], "texture": "#snow"},
+				"east": {"uv": [0, 0, 16, 1], "texture": "#snow"},
+				"south": {"uv": [0, 0, 16, 1], "texture": "#snow"},
+				"west": {"uv": [0, 0, 16, 1], "texture": "#snow"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#snow"},
+				"down": {"uv": [0, 0, 16, 1], "texture": "#snow"}
+			}
+		},
+		{
+			"name": "Transparentbush",
+			"from": [2, 3, 2],
+			"to": [14, 14, 14],
+			"faces": {
+				"north": {"uv": [0, 0, 14, 15], "texture": "#leaves", "tintindex": 0},
+				"east": {"uv": [1, 1, 15, 15], "texture": "#leaves", "tintindex": 0},
+				"south": {"uv": [1, 1, 15, 15], "texture": "#leaves", "tintindex": 0},
+				"west": {"uv": [1, 1, 15, 15], "texture": "#leaves", "tintindex": 0},
+				"up": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#leaves", "tintindex": 0}
+			}
+		},
+		{
+			"name": "Berryindicatorlevel",
+			"from": [1, 2, 1],
+			"to": [15, 16, 15],
+			"faces": {
+				"north": {"uv": [0, 0, 12, 12], "texture": "#leaves", "tintindex": 0},
+				"east": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0},
+				"south": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0},
+				"west": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#leaves", "tintindex": 0},
+				"down": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0}
+			}
+		},
+		{
+			"name": "Berries",
+			"from": [1, 2, 1],
+			"to": [15, 16, 15],
+			"faces": {
+				"north": {"uv": [2, 2, 14, 14], "texture": "#4", "cullface": "north"},
+				"east": {"uv": [2, 2, 14, 14], "texture": "#4", "cullface": "east"},
+				"south": {"uv": [2, 2, 14, 14], "texture": "#4", "cullface": "south"},
+				"west": {"uv": [2, 2, 14, 14], "texture": "#4", "cullface": "west"},
+				"up": {"uv": [2, 2, 14, 14], "texture": "#4", "cullface": "up"},
+				"down": {"uv": [2, 2, 14, 14], "texture": "#4", "cullface": "down"}
+			}
+		}
+	],
+	"groups": [0, 1, 2,
+		{
+			"name": "group",
+			"children": [3, 4]
+		}
+	]
+}
